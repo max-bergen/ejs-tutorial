@@ -1,0 +1,30 @@
+<!-- views/post.ejs -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>POST_TITLE | Node.js Blog</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <style>
+        body {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="list-group">
+  <!-- loop over blog posts and render them -->
+  <% posts.forEach((post) => { %>
+    <a href="/post/<%= post.id %>" class="list-group-item">
+      <h4 class="list-group-item-heading"><%= post.title %></h4>
+      <p class="list-group-item-text"><%= post.author %></p>
+    </a>
+  <% }) %>
+    </div>
+</body>
+
+</html>
